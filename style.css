@@ -1,0 +1,196 @@
+.gradient-background {
+  background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+.carousel-item img{
+  filter: brightness(0.7); /* Adjust the brightness value as needed */
+}
+
+
+span {
+  font-weight: bold;
+}
+
+.kiemeles {
+  font-weight: bold;
+}
+
+.idezet {
+  font-style: italic;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+p {
+  font-size: 1.1rem;
+}
+.fixed-caption p{
+  font-size: 1.5rem;
+  text-align: left;
+  font-weight: bold;
+
+}
+
+.meret {
+  font-size: 1.1rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.fixed-caption {
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  text-align: left;
+  color: white;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.fixed-caption h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.fixed-caption .btn {
+  font-size: 1.2rem;
+}
+.inner-container {
+  width: 100%;
+  padding: 50px;
+  margin: 0 auto;
+  background-color: rgb(208, 225, 241);
+}
+
+.about-us {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-us-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  width: 50%;
+  padding: 20px;
+}
+
+.about-us-image img {
+  width: 100%;
+  padding: 20px;
+  height: auto;
+}
+
+.about-us-info h6{
+  color: #0071C1;
+  font-size: 1.2rem;
+  margin-bottom: 40px
+}
+.about-us-info h3{
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.about-us-info .btn-primary{
+  font-size: 1.2rem;
+  background-color: #0071C1;
+  margin-top: 50px;
+}
+
+
+@media (max-width: 1000px) {
+  .inner-container {
+      width: 100%;
+      padding: 10px;
+  }
+  .about-us {
+    flex-direction: column;
+}
+  .about-us-info h6{
+    text-align: center;
+    justify-content: center;
+  }
+  .about-us-info h3{
+    justify-content: center;
+    text-align: center;
+  }
+  .about-us-info p{
+    text-align: center;
+  }
+  .about-us-info{
+    text-align: center;
+    margin-top: 25px;
+  }
+  .about-us-image, .about-us-info {
+      width: 100%;
+      padding: 10px;
+  }
+
+  .about-us-image img {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+  }
+
+  .fixed-caption {
+      top: 10px;
+      left: 10px;
+      text-align: left;
+      color: white;
+      z-index: 10;
+  }
+
+  .fixed-caption h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+  }
+
+  .fixed-caption .btn {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .fixed-caption {
+      top: 5px;
+      left: 5px;
+      text-align: left;
+      color: white;
+      z-index: 10;
+  }
+
+  .fixed-caption h2 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+  }
+
+  .fixed-caption .btn {
+      font-size: 0.8rem;
+  }
+}
