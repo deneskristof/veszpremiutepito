@@ -15,6 +15,7 @@
       background-position: 0% 50%;
   }
 }
+
 .carousel-item img{
   filter: brightness(0.7); /* Adjust the brightness value as needed */
 }
