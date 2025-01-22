@@ -1,23 +1,110 @@
-.gradient-background {
-  background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
-  background-size: 180% 180%;
-  animation: gradient-animation 18s ease infinite;
+.csapatunkpage{
+  background-color: #d1ddea;
+}
+.table{
+  margin-top: 50px;
+  border: none;
+}
+.table th,
+.table td {
+  border: none; /* Remove the cell borders */
+  background-color: #cbd7e3;
+}
+.img-fluid,
+.img-fluid-telep {
+  width: 100%;
+  height: auto;
+  margin: 2px; /* Decrease the margin to reduce the distance */
+}
+.col-lg-3,
+.col-lg-6 {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 10px;
+}
+.block-container {
+  display: flex; /* Use a flex container */
+  flex-direction: row; /* Arrange items in a row */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%;
+}
+.block-container h2{
+  text-align: left;
+  margin-top: 20px;
+  font-size: 2rem;
+}
+.header{
+  text-align: left;
+  margin-left: 25px;
+  margin-top: 50px;
+}
+.kapcsolat{
+  display: flex; /* Use a flex container */
+  flex-direction: column; /* Arrange items in a row */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+  justify-content: space-between;
+  margin-top: 40px;
+  width: 100%;
 }
 
-@keyframes gradient-animation {
-  0% {
-      background-position: 0% 50%;
-  }
-  50% {
-      background-position: 100% 50%;
-  }
-  100% {
-      background-position: 0% 50%;
-  }
+.block {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
 }
-
+.kapcsolat{
+  text-align: left;
+  padding-left: 25px;
+}
+.navbar{
+  padding: 0;
+}
+.container-fluid{
+  background-color: #0071C1;
+}
+.header{
+  text-align: left;
+}
+.ms-2{
+  color: white;
+}
+.meret{
+  color: white;
+}
+.company{
+  color: white;
+}
 .carousel-item img{
   filter: brightness(0.7); /* Adjust the brightness value as needed */
+}
+.tovabbi-munkaink {
+  margin-top: 30px; /* Adjust the value as needed */
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card {
+  width: calc(33.333% - 20px); /* Adjust width to ensure 20px gap */
+  margin: 10px; /* 10px margin on each side to create 20px gap */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background-color: #d1ddea;
+}
+.stab-card{
+  width: calc(33.333% - 20px); /* Adjust width to ensure 20px gap */
+  margin: 10px; /* 10px margin on each side to create 20px gap */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background-color: #d1ddea;
+}
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 -10px; /* Negative margin to offset the card margins */
 }
 
 
@@ -85,6 +172,11 @@ h5 {
   margin: 0 auto;
   background-color: rgb(208, 225, 241);
 }
+.stab-inner-container {
+  width: 100%;
+  padding: 50px;
+  margin: 0 auto;
+}
 
 .about-us {
   display: flex;
@@ -100,8 +192,21 @@ h5 {
   width: 50%;
   padding: 20px;
 }
-
+.szakmai-stab-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  width: 50%;
+  padding: 20px;
+}
 .about-us-image img {
+  width: 100%;
+  padding: 20px;
+  height: auto;
+}
+.szakmai-stab-image img{
   width: 100%;
   padding: 20px;
   height: auto;
@@ -111,6 +216,16 @@ h5 {
   color: #0071C1;
   font-size: 1.2rem;
   margin-bottom: 40px
+}
+.szakmai-stab-info h6{
+  color: #0071C1;
+  font-size: 1.2rem;
+  margin-bottom: 40px
+}
+.szakmai-stab-info h3{
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
 }
 .about-us-info h3{
   font-size: 2rem;
@@ -122,8 +237,31 @@ h5 {
   background-color: #0071C1;
   margin-top: 50px;
 }
+.container h2{
+  text-align: center;
+  margin: 40px;
+}
+.row{
+  margin: 40px;
+  justify-content: center;
+}
+.card-img-top{
+  width: 100%;
+  object-fit: cover;
+  padding: 20px;
 
-
+}
+.card-title{
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+}
+.card-text{
+  font-size: 1.2rem;
+  padding: 20px;
+  text-align: center;
+}
 @media (max-width: 1000px) {
   .inner-container {
       width: 100%;
@@ -135,6 +273,7 @@ h5 {
   .about-us-info h6{
     text-align: center;
     justify-content: center;
+    text-align: center;
   }
   .about-us-info h3{
     justify-content: center;
