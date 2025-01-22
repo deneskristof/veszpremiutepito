@@ -107,11 +107,6 @@
   margin: 0 -10px; /* Negative margin to offset the card margins */
 }
 
-
-span {
-  font-weight: bold;
-}
-
 .kiemeles {
   font-weight: bold;
 }
@@ -262,7 +257,7 @@ h5 {
   padding: 20px;
   text-align: center;
 }
-@media (max-width: 1000px) {
+@media (min-width: 375px) and (max-width: 1080px) {
   .inner-container {
       width: 100%;
       padding: 10px;
@@ -297,40 +292,28 @@ h5 {
       padding: 0;
   }
 
-  .fixed-caption {
-      top: 10px;
-      left: 10px;
-      text-align: left;
-      color: white;
-      z-index: 10;
+  .fixed-caption-header {
+      width: 100%;
   }
 
-  .fixed-caption h2 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
+  .block-container {
+    flex-direction: column; /* Stack items vertically on small screens */
   }
-
-  .fixed-caption .btn {
-      font-size: 1rem;
+  .block {
+    margin: 10px 0; /* Adjust margin for vertical spacing */
   }
-}
-
-@media (max-width: 600px) {
-  .fixed-caption {
-      top: 5px;
-      left: 5px;
-      text-align: left;
-      color: white;
-      z-index: 10;
+  .stab-card{
+    width: 100%;
+    margin: 10px;
   }
-
-  .fixed-caption h2 {
-      font-size: 1rem;
-      font-weight: bold;
-      margin-bottom: 5px;
+  .card{
+    width: 100%;
   }
-
-  .fixed-caption .btn {
-      font-size: 0.8rem;
+  .stab-inner-container{
+    width: 100%;
+    text-align: center;
+  }
+  .carousel-inner{
+    width: 100%;
   }
 }
