@@ -257,7 +257,7 @@ h5 {
   padding: 20px;
   text-align: center;
 }
-@media (min-width: 375px) and (max-width: 1080px) {
+@media (min-width: 340px) and (max-width: 1080px) {
   .inner-container {
       width: 100%;
       padding: 10px;
@@ -305,6 +305,13 @@ h5 {
   .stab-card{
     width: 100%;
     margin: 10px;
+    order: 3;
+  }
+  .stab-card.DZ{
+    order: 1;
+  }
+  .stab-card.BZ{
+    order: 2;
   }
   .card{
     width: 100%;
