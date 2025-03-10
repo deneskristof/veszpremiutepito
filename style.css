@@ -11,12 +11,9 @@ body{
   justify-content: center;
   align-items: center;
 }
-.about-us-image {
-  margin-right: 50px; /* Add margin to the right of the image */
-  margin-left: 50px;
-}
 .about-us-info {
   flex: 1; /* Allow the info section to take up the remaining space */
+  text-align: center;
 }
 
 /*Work section */
@@ -75,4 +72,150 @@ body{
 
 .btn-group {
   justify-content: center;
+}
+
+/* Stab Cards */
+.stab-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+  justify-items: center;
+}
+
+.stab-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow background */
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.stab-card.DZ {
+  grid-column: 1 / 3;
+  justify-self: center;
+  width: 30%; /* Adjust the width as needed */
+}
+
+.stab-card.BZ {
+  grid-column: 1;
+  width: 70%;
+}
+
+.stab-card.BP {
+  grid-column: 2;
+  width: 70%;
+}
+
+.stab-card.GSz {
+  grid-column: 1 / 3;
+  justify-self: center;
+  width: 30%;
+}
+
+.stab-card img {
+  width: 100%;
+  height: auto;
+}
+
+.stab-card .card-body {
+  padding: 15px;
+  text-align: center; /* Center align the text */
+}
+#munkaink .card {
+  margin-bottom: 20px;
+}
+
+#munkaink .carousel-inner img {
+  height: 300px; /* Adjust the height as needed */
+  object-fit: cover;
+}
+
+#munkaink .card-body {
+  text-align: center;
+}
+
+/* Telephely Section */
+.telephely {
+  text-align: center;
+}
+
+.telephely .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.telephely .col-lg-6 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.telephely .img-fluid-telep {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow background */
+}
+
+/* Banda Section */
+.banda {
+  text-align: center;
+}
+
+.banda .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banda img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow background */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-us-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-us-image, .about-us-info {
+    margin: 0;
+    width: 100%;
+  }
+  .stab-cards {
+    grid-template-columns: 1fr;
+  }
+  .stab-card.DZ, .stab-card.BZ, .stab-card.BP, .stab-card.GSz {
+    width: 100%;
+  }
+  .telephely .col-lg-6 {
+    width: 100%;
+  }
+}
+
+/* Lightbox Customization */
+.lightboxOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* Set to half-screen */
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+
+.lightbox .lb-image {
+  max-height: 100%; /* Ensure the image fits within the half-screen */
+}
+
+.lightbox-close {
+  display: none;
+}
+
+.lightboxOverlay:target .lightbox-close {
+  display: block;
 }
