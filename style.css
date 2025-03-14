@@ -1,7 +1,111 @@
-body{
+body {
   background-color: #f0ede6;
 }
-/*Navigation Bar */
+
+/* Navigation Bar */
+.navbar {
+  position: relative;
+  background-color: #0071C1 !important;
+  padding-right: 300px; /* Add padding to avoid overlap */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10; /* Ensure the navbar is in front of the carousel */
+}
+
+.navbar-shape {
+  position: relative;
+  z-index: 10; /* Ensure this value is higher than the carousel's z-index */
+}
+
+.navbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0; /* Position it to the right */
+  width: 500px; /* Adjusted width to only show the lighter side */
+  height: 120px;
+  background: linear-gradient(45deg, transparent 50%, #00A1E1 50%);
+  z-index: 0; /* Ensure it is behind the content */
+}
+
+.navbar::after {
+  content: 'Veszprémi útépítő kft';
+  position: absolute;
+  top: 50%;
+  right: 15px; /* Adjust the position as needed */
+  transform: translateY(-50%);
+  color: #0071C1; /* Change color to #0071C1 */
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase; /* Make text uppercase */
+  z-index: 1; /* Ensure it is above the shape */
+}
+
+.navbar-toggler {
+  position: absolute;
+  top: 50%;
+  right: 20px; /* Adjust the position as needed */
+  transform: translateY(-50%);
+  z-index: 1; /* Ensure it is above the shape */
+  display: none; /* Hide the navbar-toggler by default */
+}
+
+.navbar .nav-link {
+  color: white;
+  font-weight: bold;
+}
+
+.navbar .navbar-brand {
+  color: white;
+  font-weight: bold;
+}
+
+.navbar .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Main section carousel */
+#FrontPageCarousel .carousel-item img {
+  height: 1000px; /* Adjust the height as needed */
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.carousel-caption-static {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 10;
+}
+
+.carousel-caption-static p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: rgb(243, 243, 243);
+  text-align: left;
+}
+
+.carousel-caption-static .btn {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* Ensure the carousel fills the page horizontally */
+.carousel {
+  width: 100%;
+  z-index: 1; /* Ensure the carousel is behind the navbar */
+}
+
 
 /*About Us and Team Section */
 .about-us-section {
@@ -14,6 +118,9 @@ body{
 .about-us-info {
   flex: 1; /* Allow the info section to take up the remaining space */
   text-align: center;
+}
+.about-us-image{
+  margin-left: 50px;
 }
 
 /*Work section */
@@ -73,12 +180,10 @@ body{
 .btn-group {
   justify-content: center;
 }
-
 /* Stab Cards */
 .stab-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
   gap: 20px;
   justify-items: center;
 }
@@ -86,30 +191,67 @@ body{
 .stab-card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow background */
   border-radius: 5px;
-  overflow: hidden;
   margin-bottom: 20px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.stab-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.stab-card.is-flipped .stab-card-inner {
+  transform: rotateY(180deg);
+}
+
+.stab-card-front, .stab-card-back {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.stab-card-front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.stab-card-back {
+  position: absolute;
+  transform: rotateY(180deg);
+  background-color: #f0ede6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  z-index: 1;
 }
 
 .stab-card.DZ {
-  grid-column: 1 / 3;
-  justify-self: center;
-  width: 30%; /* Adjust the width as needed */
+  justify-self: left;
+  width: 70%; /* Adjust the width as needed */
 }
 
 .stab-card.BZ {
-  grid-column: 1;
   width: 70%;
+  justify-self: right;
 }
 
 .stab-card.BP {
-  grid-column: 2;
   width: 70%;
+  justify-self: left;
 }
 
 .stab-card.GSz {
-  grid-column: 1 / 3;
-  justify-self: center;
-  width: 30%;
+  width: 70%;
+  justify-self: right;
 }
 
 .stab-card img {
@@ -177,7 +319,41 @@ body{
 }
 
 /* Responsive Design */
+
+@media (max-width: 1300px) {
+  .navbar .navbar-collapse {
+    display: none; /* Hide the middle texts and links */
+  }
+  .navbar::after {
+    display: none; /* Hide the text on mobile devices */
+  }
+  .navbar .navbar-brand {
+    display: none; /* Hide the left text on smaller screens */
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-toggler {
+    display: block; /* Show the navbar-toggler */
+  }
+}
 @media (max-width: 768px) {
+  .navbar .navbar-collapse {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 140px; /* Match the shape width */
+    height: 120px; /* Match the shape height */
+    background: linear-gradient(45deg, transparent 50%, #00A1E1 50%);
+    z-index: 1; /* Ensure it is above the shape */
+    display: flex; /* Show the middle texts and links */
+  }
+  .navbar .navbar-collapse .nav-link {
+    color: white;
+  }
+  .navbar .navbar-brand {
+    display: none; /* Hide the left text on smaller screens */
+  }
   .about-us-section {
     flex-direction: column;
     text-align: center;
@@ -187,35 +363,53 @@ body{
     width: 100%;
   }
   .stab-cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr;
   }
   .stab-card.DZ, .stab-card.BZ, .stab-card.BP, .stab-card.GSz {
     width: 100%;
   }
+  .stab-card.BZ {
+    order: 2;
+  }
+  .stab-card.BP {
+    order: 3;
+  }
   .telephely .col-lg-6 {
     width: 100%;
   }
+  .kapcsolat-section .row {
+    text-align: center;
+  }
+  .kapcsolat-section .col-md-4 {
+    margin-bottom: 20px;
+  }
+  .kapcsolat-section .order-1 {
+    order: 1;
+  }
+  .kapcsolat-section .order-2 {
+    order: 2;
+    justify-content: center;
+  }
+  .kapcsolat-section .order-3 {
+    order: 3;
+  }
+}
+/* Kapcsolat Section */
+.kapcsolat-section .block {
+  margin-bottom: 20px;
 }
 
-/* Lightbox Customization */
-.lightboxOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50%; /* Set to half-screen */
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 999;
+.kapcsolat-section .kapcsolat {
+  text-align: center;
+  margin-top: 50px;
 }
 
-.lightbox .lb-image {
-  max-height: 100%; /* Ensure the image fits within the half-screen */
+.kapcsolat-section .header {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-.lightbox-close {
-  display: none;
-}
-
-.lightboxOverlay:target .lightbox-close {
-  display: block;
+.kapcsolat-section .cím {
+  margin-bottom: 10px;
+  margin-left: 50px;
 }
