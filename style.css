@@ -124,38 +124,97 @@ body {
 }
 
 /*Work section */
-#works{
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-.work-section-title {
-  text-align: center;
-  margin-bottom: 100px;
-}
-
+/* Alap kártya stílus */
 .card {
+  margin-top: 50px;
   margin-bottom: 20px;
 }
 
-.carousel-inner img {
-  height: 500px; /* Adjust the height as needed */
-  width: 100%;
-  object-fit: cover;
+.card-container .card-img-top {
+  width: 414px; /* Fix szélesség */
+  height: 552px; /* Fix magasság */
+  object-fit: cover; /* A kép kitölti a rendelkezésre álló területet, megtartva az arányokat */
+  margin: 0 auto; /* Középre igazítás */
 }
 
-.carousel-caption {
-  position: static;
+.details-card {
+  display: none; /* Alapértelmezés szerint rejtve */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  width: 1294px; /* A teljes sort kitölti */
+  margin-top: 20px; /* Távolság az eredeti kártyától */
+  padding: 20px;
+  position: relative; /* A nyilak pozicionálásához */
+  left: 0; /* Balra igazítás */
+}
+
+.details-card.show {
+  display: flex; /* Megjelenítés, ha a gombot megnyomják */
+}
+
+.details-card .details-content {
+  display: flex;
+  flex-direction: row; /* A kép és a szöveg egymás mellett legyen */
+  height: 627px; /* Fix magasság */
+  width: 836px; /* Fix szélesség */
+  gap: 20px;
+}
+
+.details-card .image-container {
+  flex: 2; /* A kép 2/3 részt foglaljon el */
+  height: 627px; /* Fix magasság */
+  width: 836px; /* Fix szélesség */
+  overflow: hidden;
+}
+
+.details-card .image-container img {
+  width: 100%; /* A kép szélessége kitölti a konténert */
+  height: 100%; /* A kép magassága kitölti a konténert */
+  object-fit: cover; /* A kép kitölti a rendelkezésre álló területet, megtartva az arányokat */
+  display: none; /* Alapértelmezés szerint rejtve */
+}
+
+.details-card .image-container img.active {
+  display: block; /* Csak az aktív kép jelenik meg */
+}
+
+.details-card .carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: white;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  border-radius: 5px;
-  margin-top: 10px;
-  text-align: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
 }
 
-/* Ensure the carousel fills the page horizontally */
-.carousel {
-  width: 100%;
+.details-card .carousel-control.prev-image {
+  left: 10px;
 }
+
+.details-card .carousel-control.next-image {
+  right: 10px;
+}
+
+.details-card .details-text {
+  flex: 1; /* A szöveg 1/3 részt foglaljon el */
+  padding: 20px;
+  font-size: 1rem; /* Az eredeti kártya betűméretével megegyező */
+  display: flex;
+  flex-direction: column;
+  justify-content: right; /* A szöveg középre igazítása függőlegesen */
+  margin-top: 15%;
+}
+
 /* MAP section */
 .btn-group .btn.active {
   background-color: #007bff;
