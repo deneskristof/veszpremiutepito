@@ -3,6 +3,80 @@ body {
 }
 
 /* Navigation Bar */
+/* Teljes képernyős mobil menü */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  display: none; /* Alapértelmezés szerint rejtve */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Menü megnyitásakor */
+.mobile-menu.active {
+  display: flex;
+}
+
+/* Menü lista */
+.menu-list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.menu-list li {
+  margin: 20px 0;
+}
+
+.menu-list li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.menu-list li a:hover {
+  color: #007bff;
+}
+
+/* Bezáró gomb (X) */
+.close-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Mobil menü gomb */
+.navbar-toggler {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
+/* Animáció */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
 .navbar {
   position: relative;
   background-color: #0071C1 !important;
@@ -11,14 +85,16 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 10; /* Ensure the navbar is in front of the carousel */
-}
-
-.navbar-shape {
+  }
+  
+  .navbar-shape {
   position: relative;
   z-index: 10; /* Ensure this value is higher than the carousel's z-index */
-}
-
-.navbar::before {
+  }
+  .navbar-collapse{
+    text-align: center;
+  }
+  .navbar::before {
   content: '';
   position: absolute;
   top: 0;
@@ -27,9 +103,9 @@ body {
   height: 120px;
   background: linear-gradient(45deg, transparent 50%, #00A1E1 50%);
   z-index: 0; /* Ensure it is behind the content */
-}
-
-.navbar::after {
+  }
+  
+  .navbar::after {
   content: 'Veszprémi útépítő kft';
   position: absolute;
   top: 50%;
@@ -40,30 +116,34 @@ body {
   font-weight: bold;
   text-transform: uppercase; /* Make text uppercase */
   z-index: 1; /* Ensure it is above the shape */
-}
-
-.navbar-toggler {
-  position: absolute;
-  top: 50%;
-  right: 20px; /* Adjust the position as needed */
-  transform: translateY(-50%);
-  z-index: 1; /* Ensure it is above the shape */
-  display: none; /* Hide the navbar-toggler by default */
-}
-
-.navbar .nav-link {
+  }
+  
+  .navbar-toggler {
+    font-size: 2rem; /* Nagyobb méret */
+    background: none; /* Háttér eltávolítása */
+    border: none; /* Keret eltávolítása */
+    color: white; /* Fehér szín */
+    cursor: pointer;
+    position: absolute;
+    top: 50%; /* Függőlegesen középre igazítás */
+    right: 20px; /* Igazítás a jobb oldalhoz */
+    transform: translateY(-50%); /* Pontos középre igazítás */
+    z-index: 2; /* Biztosítjuk, hogy a gomb a navbar felett legyen */
+  }
+  
+  .navbar .nav-link {
   color: white;
   font-weight: bold;
-}
-
-.navbar .navbar-brand {
+  }
+  
+  .navbar .navbar-brand {
   color: white;
   font-weight: bold;
-}
-
-.navbar .navbar-toggler-icon {
+  }
+  
+  .navbar .navbar-toggler-icon {
   filter: invert(1);
-}
+  }
 
 /* Main section carousel */
 #FrontPageCarousel .carousel-item img {
@@ -121,6 +201,9 @@ body {
 }
 .about-us-image{
   margin-left: 50px;
+}
+.text-center{
+  margin-top: 50px;
 }
 
 /*Work section */
@@ -241,21 +324,22 @@ body {
 }
 /* Stab Cards */
 .stab-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Középre igazítás */
+  gap: 20px; /* Távolság a kártyák között */
 }
 
 .stab-card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow background */
-  border-radius: 5px;
-  margin-bottom: 20px;
-  perspective: 1000px;
-  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .stab-card-inner {
+  
   position: relative;
   width: 100%;
   height: 100%;
@@ -282,6 +366,32 @@ body {
   z-index: 2;
   transform: rotateY(0deg);
 }
+/* Görbült nyíl stílus */
+.flip-arrow {
+  position: absolute;
+  bottom: 10px; /* Jobb alsó sarok */
+  right: 10px;
+  font-size: 1.5rem; /* Nyíl mérete */
+  color: black; /* Nyíl színe */
+  cursor: pointer; /* Mutatóváltás jelzés */
+  transition: transform 0.3s ease; /* Animáció a hover állapothoz */
+}
+.flip-arrow-back {
+  position: absolute;
+  top: 10px; /* Jobb alsó sarok */
+  right: 10px;
+  font-size: 1.5rem; /* Nyíl mérete */
+  color: black; /* Nyíl színe */
+  cursor: pointer; /* Mutatóváltás jelzés */
+  transition: transform 0.3s ease; /* Animáció a hover állapothoz */
+}
+
+.flip-arrow:hover {
+  transform: rotate(360deg); /* Forgatás hover állapotban */
+}
+.flip-arrow-back:hover {
+  transform: rotate(360deg); /* Forgatás hover állapotban */
+}
 
 .stab-card-back {
   position: absolute;
@@ -294,23 +404,14 @@ body {
 }
 
 .stab-card.DZ {
+  order: 1;
   justify-self: left;
-  width: 70%; /* Adjust the width as needed */
+  width: 60%; /* Adjust the width as needed */
 }
 
-.stab-card.BZ {
-  width: 70%;
-  justify-self: right;
-}
-
-.stab-card.BP {
-  width: 70%;
-  justify-self: left;
-}
-
-.stab-card.GSz {
-  width: 70%;
-  justify-self: right;
+.BZ, .BP, .Gsz {
+  order: 2;
+  width: 40%; /* Két kártya egymás mellett */
 }
 
 .stab-card img {
@@ -340,16 +441,9 @@ body {
   text-align: center;
 }
 
-.telephely .row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.telephely .col-lg-6 {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+.telephely .carousel-inner img {
+  width: 100%; /* A kép teljes szélességben kitölti a szülőelemet */
+  height: 10;
 }
 
 .telephely .img-fluid-telep {
@@ -357,6 +451,12 @@ body {
   height: auto;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow background */
+}
+.telephely img {
+  width: 100%; /* A kép teljes szélességben kitölti a szülőelemet */
+  height: 1000px; /* Fix magasság a képek egységesítéséhez */
+  object-fit: cover; /* A kép arányosan kitölti a rendelkezésre álló területet */
+  
 }
 
 /* Banda Section */
@@ -368,6 +468,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 100px;
 }
 
 .banda img {
@@ -375,6 +476,8 @@ body {
   height: auto;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow background */
+  margin-bottom: 50px;
+  margin-top: 20px;
 }
 
 /* Responsive Design */
@@ -390,29 +493,51 @@ body {
     display: none; /* Hide the left text on smaller screens */
   }
 }
-
 @media (max-width: 991px) {
   .navbar-toggler {
     display: block; /* Show the navbar-toggler */
   }
 }
 @media (max-width: 768px) {
-  .navbar .navbar-collapse {
+  .navbar .fox {
+    height: 56px; /* Az eredeti 70px méret 20%-kal csökkentve */
+}
+
+.ms-2 {
+    display: none; /* Az .ms-2 elrejtése mobil nézetben */
+}
+.header{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.navbar::before {
+    content: 'VUK Veszprémi útépítő Kft'; /* Szöveg megtartása */
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 140px; /* Match the shape width */
-    height: 120px; /* Match the shape height */
-    background: linear-gradient(45deg, transparent 50%, #00A1E1 50%);
-    z-index: 1; /* Ensure it is above the shape */
-    display: flex; /* Show the middle texts and links */
-  }
-  .navbar .navbar-collapse .nav-link {
-    color: white;
-  }
-  .navbar .navbar-brand {
-    display: none; /* Hide the left text on smaller screens */
-  }
+    top: 50%;
+    right: 0; /* Jobbra igazítva marad */
+    transform: translateY(-50%);
+    font-size: clamp(0.8rem, 2vw, 1.2rem); /* Dinamikusan csökkenő betűméret */
+    color: white; /* Szöveg színe */
+    z-index: 1; /* A szöveg a háttér előtt legyen */
+    white-space: nowrap; /* Szöveg ne törjön új sorba */
+    overflow: hidden; /* Ha túl hosszú, elrejtjük */
+    text-overflow: ellipsis; /* Hosszú szöveg esetén három pontot jelenítünk meg */
+    text-align: right; /* Szöveg jobbra igazítása */
+}
+
+.navbar::after {
+    content: 'Veszprémi útépítő kft';
+    position: absolute;
+    top: 50%;
+    right: 15px; /* Adjust the position as needed */
+    transform: translateY(-50%);
+    color: #0071C1; /* Change color to #0071C1 */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase; /* Make text uppercase */
+    z-index: 2; /* Ensure it is above the shape */
+    }
   .about-us-section {
     flex-direction: column;
     text-align: center;

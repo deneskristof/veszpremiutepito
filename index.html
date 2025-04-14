@@ -13,56 +13,62 @@
 
 <body>
 
-    <section id="navigation">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Thirteenth navbar example">
-            <div class="container-fluid">
-                <a class="navbar-brand col-lg-3 me-0 nav-link active d-flex align-items-center" aria-current="page"
-                    href="./index.html">
-                    <img class="fox" src="./images/logo-vuk.png" height="70">
-                    <div class="ms-2">
-                        <span>VUK<br /></span>
-                        VESZPRÉMI ÚTÉPÍTŐ KFT.
-                    </div>
-                </a>
-                <div class="navbar-shape">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse" id="navbarsExample11">
-                    <ul class="navbar-nav mx-auto d-none d-lg-flex">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./rolunk.html"><span class="meret">Rólunk</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./munkaink.html"><span class="meret kiemeles">Munkáink</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./csapatunk.html"><span class="meret">Csapatunk</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./kapcsolat.html"><span class="meret">Kapcsolat</span></a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav d-lg-none">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./rolunk.html">Rólunk</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./munkaink.html">Munkáink</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./csapatunk.html">Csapatunk</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./kapcsolat.html">Kapcsolat</a>
-                        </li>
-                    </ul>
-                </div>
+<section id="navigation" class="gradient-background">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Thirteenth navbar example">
+        <div class="container-fluid">
+        <a class="navbar-brand col-lg-3 me-0 nav-link active d-flex align-items-center" aria-current="page"
+            href="./index.html">
+            <img class="fox" src="./images/logo-vuk.png" height="70">
+            <div class="ms-2">
+            <span>VUK<br /></span>
+            VESZPRÉMI ÚTÉPÍTŐ KFT.
             </div>
-        </nav>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarsExample11">
+            <ul class="navbar-nav mx-auto d-none d-lg-flex">
+              <li class="nav-item">
+                <a class="nav-link" href="./rolunk.html"><span class="meret">Rólunk</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./munkaink.html"><span class="meret">Munkáink</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./csapatunk.html"><span class="meret kiemeles">Csapatunk</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./kapcsolat.html"><span class="meret">Kapcsolat</span></a>
+              </li>
+            </ul>
+            <ul class="navbar-nav d-lg-none">
+              <li class="nav-item">
+                <a class="nav-link" href="./rolunk.html">Rólunk</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./munkaink.html">Munkáink</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./csapatunk.html">Csapatunk</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./kapcsolat.html">Kapcsolat</a>
+              </li>
+            </ul>
+          </div>
+        <button id="openMenu" class="navbar-toggler d-lg-none" type="button" aria-label="Toggle navigation">
+            ☰
+        </button>
+        </div>
+        <div id="mobileMenu" class="mobile-menu">
+            <button id="closeMenu" class="close-menu">✖</button>
+            <ul class="menu-list">
+                <li><a href="./rolunk.html">Rólunk</a></li>
+                <li><a href="./munkaink.html">Munkáink</a></li>
+                <li><a href="./csapatunk.html">Csapatunk</a></li>
+                <li><a href="./kapcsolat.html">Kapcsolat</a></li>
+                <li><a href="#">Impresszum</a></li>
+            </ul>
+        </div>
+    </nav>
     </section>
     <section id="FrontPageCarousel">
         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
@@ -243,6 +249,23 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const openMenuButton = document.getElementById('openMenu');
+            const closeMenuButton = document.getElementById('closeMenu');
+            const mobileMenu = document.getElementById('mobileMenu');
+    
+            // Menü megnyitása
+            openMenuButton.addEventListener('click', function () {
+                mobileMenu.classList.add('active');
+            });
+    
+            // Menü bezárása
+            closeMenuButton.addEventListener('click', function () {
+                mobileMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
