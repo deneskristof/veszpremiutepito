@@ -16,50 +16,59 @@
 <body class="csapatunkpage">
   <section id="navigation" class="gradient-background">
     <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Thirteenth navbar example">
-      <div class="container-fluid">
-        <a class="navbar-brand col-lg-3 me-0 nav-link active d-flex align-items-center" aria-current="page"
-          href="./index.html">
-          <img class="fox" src="./images/logo-vuk.png" height="70">
-          <div class="ms-2">
+        <div class="container-fluid">
+        <a class="navbar-brand col-lg-3 me-0 nav-link d-flex align-items-center" aria-current="page"
+            href="./index.html">
+            <img class="fox" src="./images/logo-vuk.png" height="70">
+            <div class="ms-2">
             <span>VUK<br /></span>
             VESZPRÉMI ÚTÉPÍTŐ KFT.
-          </div>
+            </div>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11"
-          aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav d-none d-lg-flex">
+              <li class="nav-item">
+                <a class="nav-link" href="./rolunk.html"><span class="meret">Rólunk</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./munkaink.html"><span class="meret">Munkáink</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./csapatunk.html"><span class="meret">Csapatunk</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./kapcsolat.html"><span class="meret">Kapcsolat</span></a>
+              </li>
+            </ul>
+            <ul class="navbar-nav d-lg-none">
+              <li class="nav-item">
+                <a class="nav-link" href="./rolunk.html">Rólunk</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./munkaink.html">Munkáink</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./csapatunk.html">Csapatunk</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./kapcsolat.html">Kapcsolat</a>
+              </li>
+            </ul>
+          </div>
+        <button id="openMenu" class="navbar-toggler d-lg-none" type="button" aria-label="Toggle navigation">
+            ☰
         </button>
-        <div class="collapse navbar-collapse" id="navbarsExample11">
-          <ul class="navbar-nav mx-auto d-none d-lg-flex">
-            <li class="nav-item">
-              <a class="nav-link" href="./rolunk.html"><span class="meret">Rólunk</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./munkaink.html"><span class="meret">Munkáink</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./csapatunk.html"><span class="meret kiemeles">Csapatunk</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./kapcsolat.html"><span class="meret">Kapcsolat</span></a>
-            </li>
-          </ul>
-          <ul class="navbar-nav d-lg-none">
-            <li class="nav-item">
-              <a class="nav-link" href="./rolunk.html">Rólunk</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./munkaink.html">Munkáink</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./csapatunk.html">Csapatunk</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./kapcsolat.html">Kapcsolat</a>
-            </li>
-          </ul>
         </div>
-      </div>
+        <div id="mobileMenu" class="mobile-menu">
+            <button id="closeMenu" class="close-menu">✖</button>
+            <ul class="menu-list">
+                <li><a href="./rolunk.html">Rólunk</a></li>
+                <li><a href="./munkaink.html">Munkáink</a></li>
+                <li><a href="./csapatunk.html">Csapatunk</a></li>
+                <li><a href="./kapcsolat.html">Kapcsolat</a></li>
+                <li><a href="./impresszum.html">Impresszum</a></li>
+            </ul>
+        </div>
     </nav>
   </section>
   <section class="csapatunk">
@@ -81,7 +90,7 @@
                 <p class="card-text">MV-KÉ, MV-VZ, ME-KÉ</p>
               </div>
               <div class="flip-arrow">
-                <p> Fordíts meg</p>
+                <p class="flipClass"> Fordíts meg</p>
               </div>
             </div>
             <div class="stab-card-back">
@@ -107,22 +116,9 @@
                   <strong>1994-1998:</strong> Magyar Aszfalt Kft. - művezető <br/>
                   <strong>1993-1994:</strong> VM. Közúti Igazgatóság - tervező mérnök <br/>
                 </ul>
-                <h5 class="card-text mt-3">JELENTŐSEBB TÖBBLETTAPASZTALAT </h5>
-                <ul class="card-text">
-                  <strong>2024.02. – 2024.07.:</strong> Balatonfűzfő, települési úthálózat felújítási munkái <br/>Építésvezető, FMV (6 hónap) <br/>
-                  <strong>2022.09. – 2022.11.:</strong> Zánka településen végzett útburkolat felújítási munkák <br/>Építésvezető, FMV (3 hónap) <br/>
-                  <strong>2021.01. – 2021.08.:</strong> Balatonfűzfő, települési úthálózat felújítási munkái <br/>Építésvezető, FMV (8 hónap) <br/>
-                  <strong>2021.09. – 2022.05.:</strong> Balatonfüred, Lua Resort Hotel útépítési feladatai <br/>Építésvezető, FMV (9 hónap) <br/>
-                  <strong>2020.03. – 2020.10.:</strong> Szigliget településen belső úthálózat felújítási munkái <br/>Építésvezető, FMV (8 hónap) <br/>
-                  <strong>2019.02. – 2019.07.:</strong> Monoszló-Balatoncsicsó összekötő út <br/>Építésvezető, FMV (5 hónap) <br/>
-                  <strong>2018.06. – 2018.10.:</strong> Zirc, út- járdaépítési feladatok <br/>Építésvezető, FMV (5 hónap) <br/>
-                  <strong>2016.11. – 2016.12.:</strong> Zánka, Iskola utca járdaépítés, zöldterület rendezés, parkosítás <br/>Építésvezető, FMV (2 hónap) <br/>
-                  <strong>2015.05. – 2015.12.:</strong> Balatonakali, Petőfi S. utca, Eötvös utca, Sport u., sportpálya építési munkák <br/>Építésvezető, FMV (8 hónap) <br/>
-                  <strong>2012.04. – 2012.07.:</strong> Nemesvámos, 332 és 276 hrsz-út utca útburkolat felújítási valamint a nemesvámosi 400/2 hrsz-ú közterületen útépítési feladatok <br/>Építésvezető, FMV (4 hónap) <br/>
-                </ul>
               </div>
               <div class="flip-arrow-back">
-                <p> Fordíts Vissza</p>
+                <p class="flipClass"> Fordíts Vissza</p>
               </div>
             </div>
           </div>
@@ -138,11 +134,33 @@
                 <p class="card-text">Telefon: +36 30 732 2264</p>
                 <p class="card-text">MV-KÉ, MV-VZ, ME-KÉ</p>
               </div>
+              <div class="flip-arrow">
+                <p class="flipClass"> Fordíts meg</p>
+              </div>
             </div>
             <div class="stab-card-back">
               <div class="card-body">
                 <h3 class="card-title">Balog Zoltán</h3>
-                <p class="card-text">Szakmai önéletrajz</p>
+                <p class="card-text"><strong>Születési idő:</strong> 1978.05.05.</p>
+                <p class="card-text"><strong>Állampolgárság:</strong> Magyar</p>
+                <h5 class="card-text mt-3">ISKOLAI VÉGZETTSÉG, EGYÉB TANULMÁNYOK</h5>
+                <ul class="card-text">
+                  <strong>2005-2007:</strong> Szent István Egyetem Ybl Miklós Építéstudományi Kar – Építőmester Szakmérnök <br/>
+                  <strong>1997-2000:</strong> NYME Földmérési és Földrendezői Főiskolai Kar – földmérő mérnök <br/>
+                  <strong>1992-1997:</strong> Jáky József Szakközépiskola – út-, hídépítő technikum
+                </ul>
+                <h5 class="card-text mt-3">MUNKAHELYEK, MUNKAKÖRÖK</h5>
+                <ul class="card-text">
+                  <strong>2024 - jelen </strong> Veszprémi Útépítő Kft. – Fő-építésvezető <br/>
+                  <strong>2013 - 2024 </strong> Revcolor Kft. - építésvezető <br/>
+                  <strong>2009 - 2012 </strong> Hornyák Szálítási és Szolgáltató Kft. – építésvezető <br/>
+                  <strong>2008 - 2009 </strong> EUROASZFALT Kft., építésvezető <br/>
+                  <strong>2002 – 2008 </strong> BETONÚT Rt. – művezető, építésvezető, főépítésvezető <br/>
+                  <strong>2000 – 2002 </strong> HOFFMANN Rt. – művezető <br/>
+                </ul>
+              </div>
+              <div class="flip-arrow-back">
+                <p class="flipClass"> Fordíts Vissza</p>
               </div>
             </div>
           </div>
@@ -156,13 +174,31 @@
                 <h5 class="card-text">Építésvezető</h5>
                 <p class="card-text">Email: busch.peter@veszpremiutepito.hu</p>
                 <p class="card-text">Telefon: +36 30 526 2122</p>
-                <p class="card-text">MV-KÉ, MV-VZ, MV-MÉ, MV-É</p>
+                <p class="card-text">MV-KÉ, MV-VZ, MV-MÉ <br/> MV-É</p>
+              </div>
+              <div class="flip-arrow">
+                <p class="flipClass">Fordíts meg</p>
               </div>
             </div>
             <div class="stab-card-back">
               <div class="card-body">
                 <h3 class="card-title">Busch Péter</h3>
-                <p class="card-text">Szakmai önéletrajz</p>
+                <p class="card-text"><strong>Születési idő:</strong> 1978.09.29.</p>
+                <p class="card-text"><strong>Állampolgárság:</strong> Magyar</p>
+                <h5 class="card-text mt-3">ISKOLAI VÉGZETTSÉG, EGYÉB TANULMÁNYOK</h5>
+                <ul class="card-text">
+                  <strong>1998-2002:</strong> Széchenyi István Főiskola, Építőmérnöki szak, Győr / Építőmérnök <br/>
+                  <strong>1993-1998:</strong> Táncsics Mihály Szakközépiskola és Szakmunkásképző Intézet, Veszprém / Magasépítő Technikus
+                </ul>
+                <h5 class="card-text mt-3">MUNKAHELYEK, MUNKAKÖRÖK</h5>
+                <ul class="card-text">
+                  <strong>2022. június 01. – jelenleg </strong> Veszprémi Útépítő Kft, Tótvázsony, Építésvezető <br/>
+                  <strong>2014. március 1. – 2022. május 31. </strong> Via Vomito Kft., Veszprém, Építésvezető <br/>
+                  <strong>2002. július 15. – 2014. február 28. </strong> Practical Kft., Veszprém, Építésvezető <br/>
+                </ul>
+              </div>
+              <div class="flip-arrow-back">
+                <p class="flipClass"> Fordíts Vissza</p>
               </div>
             </div>
           </div>
@@ -175,12 +211,6 @@
                 <h5 class="card-title">Gáspár Szilvia</h5><br/>
                 <h5 class="card-text">Gazdasági irodavezető</h5>
                 <p class="card-text">E-mail: gaspar.szilvia@veszpremiutepito.hu</p>
-              </div>
-            </div>
-            <div class="stab-card-back">
-              <div class="card-body">
-                <h3 class="card-title">Gáspár Szilvia</h3>
-                <p class="card-text">Szakmai önéletrajz</p>
               </div>
             </div>
           </div>
@@ -200,36 +230,36 @@
       <table class="table">
         <thead>
           <tr>
-            <td>Liebherr A310 gumikerekes forgókotró</td>
-            <td>12,5to</td>
-            <td>2014-es évjáratú</td>
+            <td class="td-elem">Liebherr A310 gumikerekes forgókotró</td>
+            <td class="td-elem">12,5to</td>
+            <td class="td-elem">2014-es évjáratú</td>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>ATLAS AC90UF gumiláncos forgókotró</td>
-            <td>9,3to</td>
-            <td>2022-es évjáratú</td>
+            <td class="td-elem">ATLAS AC90UF gumiláncos forgókotró</td>
+            <td class="td-elem">9,3to</td>
+            <td class="td-elem">2022-es évjáratú</td>
           </tr>
           <tr>
-            <td>WACKER RD27-100 dupla acélpalástú henger</td>
-            <td>2,7to</td>
-            <td>2015-ös évjáratú</td>
+            <td class="td-elem">WACKER RD27-100 dupla acélpalástú henger</td>
+            <td class="td-elem">2,7to</td>
+            <td class="td-elem">2015-ös évjáratú</td>
           </tr>
           <tr>
-            <td>AMMAN padkahenger</td>
-            <td>0,8to</td>
-            <td>2018-as évjáratú</td>
+            <td class="td-elem">AMMAN padkahenger</td>
+            <td class="td-elem">0,8to</td>
+            <td class="td-elem">2018-as évjáratú</td>
           </tr>
           <tr>
-            <td>Lapvibrátorok, döngölőbékák, bontókalapácsok, aszfaltvágók, aggregátorok</td>
-            <td></td>
-            <td>2020-tól levő évjáratúak</td>
+            <td class="td-elem">Lapvibrátorok, döngölőbékák, bontókalapácsok, aszfaltvágók, aggregátorok</td>
+            <td class="td-elem"></td>
+            <td class="td-elem">2020-tól levő évjáratúak</td>
           </tr>
           <tr>
-            <td>Gépjárművek, brigád autók</td>
-            <td>6db</td>
-            <td>2016-tól évjáratúak</td>
+            <td class="td-elem">Gépjárművek, brigád autók</td>
+            <td class="td-elem">6db</td>
+            <td class="td-elem">2016-tól évjáratúak</td>
           </tr>
         </tbody>
       </table>
@@ -269,36 +299,36 @@
       <table class="table">
         <thead>
           <tr>
-            <td>Vögele 1300-2 aszfaltfiniser</td>
-            <td>9,6to</td>
-            <td>2021-es évjárat</td>
+            <td class="td-elem">Vögele 1300-2 aszfaltfiniser</td>
+            <td class="td-elem">9,6to</td>
+            <td class="td-elem">2021-es évjárat</td>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Vögele 1600-2 aszfaltfiniser</td>
-            <td>24to</td>
-            <td>2015-ös évjárat</td>
+            <td class="td-elem">Vögele 1600-2 aszfaltfiniser</td>
+            <td class="td-elem">24to</td>
+            <td class="td-elem">2015-ös évjárat</td>
           </tr>
           <tr>
-            <td>HAMM HD 14 dupla acélpalástú henger</td>
-            <td>5,4to</td>
-            <td>2019-es évjárat</td>
+            <td class="td-elem">HAMM HD 14 dupla acélpalástú henger</td>
+            <td class="td-elem">5,4to</td>
+            <td class="td-elem">2019-es évjárat</td>
           </tr>
           <tr>
-            <td>HAMM HD 90 dupla acélpalástú henger</td>
-            <td>9to</td>
-            <td>2020-as évjárat</td>
+            <td class="td-elem">HAMM HD 90 dupla acélpalástú henger</td>
+            <td class="td-elem">9to</td>
+            <td class="td-elem">2020-as évjárat</td>
           </tr>
           <tr>
-            <td>Dynapac padkafiniser</td>
-            <td>12to</td>
-            <td>2013-as évjárat</td>
+            <td class="td-elem">Dynapac padkafiniser</td>
+            <td class="td-elem">12to</td>
+            <td class="td-elem">2013-as évjárat</td>
           </tr>
           <tr>
-            <td>Tehergépkocsik, nyerges vontatók</td>
-            <td>Alvállalkozói teljesítéssel</td>
-            <td>EUR V normától felfelé</td>
+            <td class="td-elem">Tehergépkocsik, nyerges vontatók</td>
+            <td class="td-elem">Alvállalkozói teljesítéssel</td>
+            <td class="td-elem">EUR V normától felfelé</td>
           </tr>
         </tbody>
       </table>
@@ -369,11 +399,6 @@
                         </a>
                       </div>
                       <div class="carousel-item">
-                        <a href="./Képek/Képek/Telephely/telephely_9.webp" data-lightbox="telephely">
-                          <img src="./Képek/Képek/Telephely/telephely_9.webp" class="d-block w-100" alt="Telephely kép 9">
-                        </a>
-                      </div>
-                      <div class="carousel-item">
                         <a href="./Képek/Képek/Telephely/telephely_10.webp" data-lightbox="telephely">
                           <img src="./Képek/Képek/Telephely/telephely_10.webp" class="d-block w-100" alt="Telephely kép 10">
                         </a>
@@ -431,7 +456,7 @@
             <li class="nav-item"><a href="./rolunk.html" class="nav-link px-2 text-body-secondary">Rólunk</a></li>
             <li class="nav-item"><a href="./munkaink.html" class="nav-link px-2 text-body-secondary">Munkáink</a></li>
             <li class="nav-item"><a href="./csapatunk.html" class="nav-link px-2 text-body-secondary">Csapatunk</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Impresszum</a></li>
+            <li class="nav-item"><a href="./impresszum.html" class="nav-link px-2 text-body-secondary">Impresszum</a></li>
             <li class="nav-item"><a href="./kapcsolat.html" class="nav-link px-2 text-body-secondary">Kapcsolat</a></li>
           </ul>
         </footer>
@@ -444,7 +469,23 @@ integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIe
 crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 <script src="./csapatunk.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const openMenuButton = document.getElementById('openMenu');
+      const closeMenuButton = document.getElementById('closeMenu');
+      const mobileMenu = document.getElementById('mobileMenu');
 
+      // Menü megnyitása
+      openMenuButton.addEventListener('click', function () {
+          mobileMenu.classList.add('active');
+      });
+
+      // Menü bezárása
+      closeMenuButton.addEventListener('click', function () {
+          mobileMenu.classList.remove('active');
+      });
+  });
+</script>
 </body>
 
 </html>
